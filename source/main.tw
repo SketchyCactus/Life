@@ -1,0 +1,30 @@
+::StoryData
+{
+        "ifid": "13891BEF-8496-4CB6-8F6D-DE11A4F7BBF1",
+        "format": "SugarCube",
+        "format-version": "2.30.0"
+        
+}
+
+:: StoryInit {"position":"0,100"}
+
+// Global Variables
+<<set $gametitle to "Life">>
+<<set $version to 0.1>>
+
+<<set $WeekDay to ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']>>
+<<set $Day to 0 >>
+<<set $Time to 0 >>
+<<set $CurrentTime to ['Morning','Night','Evening','Day'][$Time % 4]>>
+
+:: StoryTitle {"position":"0,200"}
+Life
+
+:: StoryCaption {"position":"0,300"}
+
+:: Start {"position":"200,0"}
+Welcome to $gametitle v$version
+[[SecondPassage]]
+
+:: SecondPassage
+<<return>>
